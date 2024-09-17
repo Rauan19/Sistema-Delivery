@@ -80,6 +80,7 @@ export const CardCarrinho = styled.div`
 
 export const Entregascarrinho = styled.div`
  width: 100%;
+ color: black;
   max-width: 260px;
   background-color: white;
   border-radius: 8px;
@@ -95,6 +96,9 @@ div{
     
     display: flex;
     justify-content:space-around  ;
+}
+h3{
+  color: green;
 }
 button {
     background-color: #ff4c4c;

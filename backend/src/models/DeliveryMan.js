@@ -4,7 +4,7 @@ import { hash } from "bcrypt"
 
 
 export class CreateDeliveruMan {
-    async execute(username, password) {
+    async execute(username, password, name) {
         const deliverymanExist = await Banco.deliveryman.findUnique({
             where: {
                 username
@@ -21,7 +21,8 @@ export class CreateDeliveruMan {
         const DeliveryMan = await Banco.deliveryman.create({
             data: {
                 username,
-                password: hashpassword
+                password: hashpassword,
+                name
             }
         })
 

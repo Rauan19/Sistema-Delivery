@@ -8,9 +8,14 @@ export const Background = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #CE1212;
+  background: white;
   background-size: 600% 600%;
- 
+  
+  .btnEntrega{
+  box-shadow: 0px 0px 5px #CE1212 ;
+  background-color: transparent;
+  font-weight: 600;
+ }
 `;
 
 export const LoginContainer = styled.div`
@@ -28,6 +33,7 @@ export const LoginContainer = styled.div`
 export const Logo = styled.div`
   width: 100px;
   margin-bottom: 20px;
+  margin-right: 60px;
 
   img {
     width: 100%;

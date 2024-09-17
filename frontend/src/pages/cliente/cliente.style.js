@@ -11,7 +11,7 @@ export const CaixaADD = styled.div`
   
 `;
 
-export const NovaEntrega = styled.section`
+export const NovaEntrega = styled.form`
   background-color: white;
   padding: 20px;
   height: auto;
@@ -64,3 +64,10 @@ export const Footer = styled.footer`
 
  
 `;
+
+export const LoadingContainer = styled.div`
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`

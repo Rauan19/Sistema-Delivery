@@ -6,10 +6,16 @@ export const RegisterContainer = styled.div`
   justify-content: center;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #cc1212;
+  background-color: white;
+
+  .btnEntrega{
+  box-shadow: 0px 0px 5px #CE1212 ;
+  background-color: transparent;
+  font-weight: 600;
+ }
 `;
 
-export const RegisterForm = styled.div`
+export const RegisterForm = styled.form`
   background-color: white;
   padding: 40px;
   border-radius: 10px;

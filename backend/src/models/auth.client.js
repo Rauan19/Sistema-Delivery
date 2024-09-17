@@ -1,32 +1,31 @@
-import {sign} from "jsonwebtoken"
-import { Banco } from "../config/db/prisma"
-import  {compare} from "bcrypt"
+import { sign } from "jsonwebtoken";
+import { Banco } from "../config/db/prisma";
+import { compare } from "bcrypt";
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 export class AuthenticateClientCase {
-    async execute(username, password) {
+  async execute(username, password) {
+    const client = await Banco.clients.findUnique({
+      where: { username }
+    });
 
-        const client = await Banco.clients.findUnique({
-            where: {
-                username
-            }
-        })
-
-        if(!client) {
-            throw new Error("Username ou password invalido")
-        }
-
-        const passwordMatch  = await compare(password, client.password)
-
-        if(!passwordMatch) {
-            throw new Error("Username ou password invalido")
-        }
-
-
-        const token = sign({username}, "9ef20ec6832a9c4adfb35c2ae1d86f85", {
-            subject: client.id,
-            expiresIn: "5d"
-        })
-
-        return token
-
+    if (!client) {
+      throw new Error("Invalid username or password");
     }
+
+    const passwordMatch = await compare(password, client.password);
+
+    if (!passwordMatch) {
+      throw new Error("Invalid username or password");
+    }
+
+    const token = sign({ username }, process.env.TOKENCHAVE, {
+      subject: client.id,
+      expiresIn: "5d"
+    });
+
+    return token;
+  }
 }

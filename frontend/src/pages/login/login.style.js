@@ -11,6 +11,11 @@ export const Background = styled.div`
   background: #CE1212;
   background-size: 600% 600%;
  
+ .btnEntrega{
+  box-shadow: 0px 0px 5px #CE1212 ;
+  background-color: transparent;
+  font-weight: 600;
+ }
 `;
 
 export const LoginContainer = styled.div`
@@ -19,7 +24,7 @@ export const LoginContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +35,7 @@ export const Logo = styled.div`
   margin-bottom: 20px;
 
   img {
-    width: 100%;
+    width: 80%;
   }
 `;
 

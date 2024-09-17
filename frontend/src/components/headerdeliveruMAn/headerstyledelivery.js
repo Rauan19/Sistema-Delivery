@@ -2,17 +2,18 @@ import styled from 'styled-components'
 
 export const Headerstyle = styled.header`
 width: 100%;
+max-width: 100%;
 height: 100px;
 background-color: rgb(206, 18, 18);
 display: flex;
-gap: 150px;
+gap: 130px;
 align-items: center;
 justify-content: space-around;
 
 `
 
 export const IMG = styled.img`
-width: 87px;
+width: 80px;
 
 `
 export const Sair = styled.p`
@@ -28,12 +29,13 @@ width: 60px;
 export const TitleLogo = styled.h2`
 color: white;
 margin-top: 10px;
+font-size: 19px;
 font-family: Arial, Helvetica, sans-serif;
 `
 
 export const Div = styled.div`
 display: flex;
-font-size: 17px;
+font-size: 13px;
 gap: 60px;
 font-family:Arial, Helvetica, sans-serif ;
 h5{
@@ -45,6 +47,7 @@ h5{
 }
 p{
     color: white;
+    font-weight: 700;
     margin-top: 6px;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;

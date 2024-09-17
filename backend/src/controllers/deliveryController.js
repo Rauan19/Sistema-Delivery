@@ -20,7 +20,8 @@ import { DeliveryCase } from "../models/Delivery"
 
         return res.status(201).json(delivery)
     } catch (error) {
-        return res.status(401).json({err: error.message})
+        console.error('Erro ao criar entrega:', {err: error.message}); // Adiciona mais detalhes sobre o erro
+        return res.status(500).json({ err: 'Erro interno do servidor. Verifique os logs para mais detalhes.' });
         
     }
        
@@ -29,18 +30,18 @@ import { DeliveryCase } from "../models/Delivery"
 
     async handleFinALl (req, res) {
          const deliverycase = new DeliveryCase()
-         const deliveresALl = await deliverycase.FIndAllDeliveryCase()
+         const deliveresALl = await deliverycase.findAllDeliveryCase()
          return res.status(200).json(deliveresALl)
     }
 
     async UPdateDeliveryManCOntroLL (req, res) {
-
-        const {id_deliveryman} = req.body
         const {id_delivery} = req.params
+        const {Status_delivery} = req.body
+      
  
      const deliverycase = new DeliveryCase()
       try {
-         const delivery = await deliverycase.UPdateDeliveryMan(id_deliveryman, id_delivery)
+         const delivery = await deliverycase.updateDeliveryMan( id_delivery, Status_delivery )
 
         return res.status(200).json(delivery)
       } catch (error) {
@@ -54,7 +55,7 @@ import { DeliveryCase } from "../models/Delivery"
         const {id_client} = req.params;
         const DeliverisNew = new DeliveryCase()
         try {
-           const deliveris = await DeliverisNew.FindDeliveryPOrClient(id_client)
+           const deliveris = await DeliverisNew.findDeliveryPorClient(id_client)
            return res.status(200).json(deliveris)
         } catch (error) {
             return res.status(401).json({error})
@@ -67,7 +68,7 @@ import { DeliveryCase } from "../models/Delivery"
         const DeliverisNew = new DeliveryCase()
 
         try {
-            const result = await DeliverisNew.FINAllUsecaseDEliveryMan(id_deliveryman)
+            const result = await DeliverisNew.findAllUsecaseDeliveryMan(id_deliveryman)
             return res.status(200).json(result)
         } catch (error) {
             return res.status(401).json({error})
@@ -81,7 +82,7 @@ import { DeliveryCase } from "../models/Delivery"
 
         try {
             const newDeli = new DeliveryCase()
-            const UpdateDeli = await  newDeli.UpdateDeliCLi(id_delivery, id_deliveryman)
+            const UpdateDeli = await  newDeli.updateDeliCli(id_delivery, id_deliveryman)
 
             return res.status(200).json(UpdateDeli)
         } catch (error) {
@@ -95,7 +96,7 @@ import { DeliveryCase } from "../models/Delivery"
 
         try {
             const newDeli = new DeliveryCase()
-            const resuly = await newDeli.DeleteDeliveryClient(id_delivery)
+            const resuly = await newDeli.deleteDeliveryClient(id_delivery)
             return res.status(200).json(resuly)
         } catch (error) {
             return res.status(401).json({err: message.errpr})

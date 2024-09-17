@@ -7,10 +7,16 @@ export const RegisterContainer = styled.div`
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #cc1212;
+
+  .btnEntrega{
+  box-shadow: 0px 0px 5px #CE1212 ;
+  background-color: transparent;
+  font-weight: 600;
+ }
 `;
 
-export const RegisterForm = styled.div`
-  background-color: white;
+export const RegisterForm = styled.form`
+  background-color:  rgba(255, 255, 255, 0.9);
   padding: 40px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);

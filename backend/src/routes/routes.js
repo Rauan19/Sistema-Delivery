@@ -25,11 +25,11 @@ routes.post("/deliveryman", CreateDeliveryManCOntroller.createDeliveryMan)
 
 routes.post("/loginDeliveryMan", AuthDelivMAN.authMan)
 
-routes.post("/delivery/:id_client", EnsureAuthenClient, CreateDeliveryController.handle )
+routes.post("/delivery/:id_client", EnsureAuthenClient, CreateDeliveryController.handle)
 
 routes.get("/deliveries", MIddDeliveryMan, CreateDeliveryController.handleFinALl)
 
-routes.put("/delivery/update/:id_delivery",  CreateDeliveryController.UPdateDeliveryManCOntroLL)
+routes.put("/Status/update/:id_delivery",  CreateDeliveryController.UPdateDeliveryManCOntroLL)
 // tem q consertar esse put
 
 
@@ -39,6 +39,6 @@ routes.get("/delivery/get/:id_client", EnsureAuthenClient , CreateDeliveryContro
 
 routes.get("/deliveryman/deliveries/:id_deliveryman", MIddDeliveryMan, CreateDeliveryController.FinALLDeliveryManCOntroller )
 
-routes.put("/update/:id_delivery", MIddDeliveryMan, CreateDeliveryController.AtualizarDeliveryClient  )
+routes.put("/update/:id_delivery", MIddDeliveryMan, CreateDeliveryController.AtualizarDeliveryClient)
 
 export default routes

@@ -17,6 +17,7 @@ model Deliveryman {
   id         String       @id @default(uuid())
   username   String       @unique
   password   String
+  name     String?
   Deliveries Deliveries[]
 
   @@map("deliveryman")
@@ -25,6 +26,7 @@ model Deliveryman {
 model Clients {
   id         String       @id @default(uuid())
   username   String       @unique
+  name   String?
   password   String
   Deliveries Deliveries[]
 
