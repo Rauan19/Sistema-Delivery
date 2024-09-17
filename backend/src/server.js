@@ -14,7 +14,8 @@ app.use(cors())
 
 app.use(routes)
 
+const Port = process.env.PORT || 4000
 
-app.listen(4000, () => {
+app.listen(Port, () => {
     console.log("rodando")
 })
