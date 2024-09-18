@@ -56,7 +56,7 @@ export const HeaderDeliveryMan = () => {
       <Div>
         <nav>
           {loading ? ( // Verifica se está carregando
-            <BlinkBlur size={32} colors={["#333", "#999"]} /> // Exibe o indicador de carregamento
+            <BlinkBlur size="10" color="red" /> // Exibe o indicador de carregamento
           ) : (
             <>
               <h5>{quantidadeEntregas}</h5>

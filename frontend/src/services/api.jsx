@@ -10,7 +10,7 @@ api.interceptors.response.use(
 
         if (error.response && error.response.status === 401) {
             localStorage.clear();
-            window.location.href = '/login/entregador';
+            window.location.href = '/loginClient';
         }
 
         return Promise.reject(error);
@@ -19,12 +19,8 @@ api.interceptors.response.use(
 
 
 
-
-
-
-
 export const apiMan = axios.create({
-    baseURL: "http://localhost:4000/"
+    baseURL: "https://dfood.onrender.com/"
 });
 
 apiMan.interceptors.response.use(
