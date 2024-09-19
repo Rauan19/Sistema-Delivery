@@ -26,7 +26,7 @@ export const NovaEntrega = styled.form`
 
   input, textarea {
     width: 90%;
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -57,8 +57,8 @@ export const Footer = styled.footer`
   background-color: rgb(206, 18, 18);
   color: rgb(255, 204, 0);
   text-align: center;
-  padding: 10px;
-  height: 44px;
+  padding: 0px;
+  height: 42px;
   margin-top: 20px;
   
 
