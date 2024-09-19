@@ -11,18 +11,16 @@ import { PrivateDeliMan } from "./private";
 export const RoutesComponest = () => {
     return (
         <Routes>
-            {/* Rotas públicas */}
+            {/* Redireciona a rota raiz para a página de login do cliente */}
+            <Route path="/" element={<Navigate to="/loginClient" />} />
+            
             <Route path="/loginClient" element={<LoginPage />} />
             <Route path="/registro/client" element={<RegisterCLiente />} />
             <Route path="/login/entregador" element={<LoginEntregador />} />
-            <Route path="/registro/entregador" element={<RegisterEntregador />} />
-            
-            {/* Rotas privadas */}
-            <Route path="/deliveryman" element={<PrivateDeliMan Component={PageDeliveryMan} />} />
+            <Route path="/registro/Entregador" element={<RegisterEntregador />} />
+
+            <Route path='/deliveryman' element={<PrivateDeliMan Component={PageDeliveryMan} />} />
             <Route path="/client" element={<Private Component={PageClient} />} />
-            
-            {/* Rota padrão - redireciona para o login do cliente */}
-            <Route path="*" element={<Navigate to="/loginClient" />} />
         </Routes>
     );
 };
