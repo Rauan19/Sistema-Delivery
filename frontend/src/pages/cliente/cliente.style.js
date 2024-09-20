@@ -54,11 +54,11 @@ export const NovaEntrega = styled.form`
 
 
 export const Footer = styled.footer`
-  background-color: rgb(206, 18, 18);
+  
   color: rgb(255, 204, 0);
   text-align: center;
-  padding: 0px;
-  height: 42px;
+  
+ 
   margin-top: 20px;
   
 

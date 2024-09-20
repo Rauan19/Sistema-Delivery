@@ -42,7 +42,7 @@ export const PageClient = () => {
    
 
     try {
-       await api.post(`http://localhost:4000/delivery/${userId}`, deliveryDataWithCorrectPrice, {
+       await api.post(`/delivery/${userId}`, deliveryDataWithCorrectPrice, {
         headers: {
           Authorization: `Bearer ${session.token}`,
           'Content-Type': 'application/json'
