@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const api = axios.create({
-    baseURL: "https://dfood.onrender.com/"
+    baseURL: "https://sistema-delivery.onrender.com/"
 });
 api.interceptors.response.use(
     response => response,
@@ -20,7 +20,7 @@ api.interceptors.response.use(
 
 
 export const apiMan = axios.create({
-    baseURL: "https://dfood.onrender.com/"
+    baseURL: "https://sistema-delivery.onrender.com/"
 });
 
 apiMan.interceptors.response.use(

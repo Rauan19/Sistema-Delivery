@@ -7,8 +7,6 @@ export const CaixaADD = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   margin: 0 auto;
-
-  
 `;
 
 export const NovaEntrega = styled.form`
